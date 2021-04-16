@@ -415,6 +415,13 @@ one way taxi hosur
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+ <style>
+    .container-map{
+        width: 126%;
+        height: 33rem;
+        margin: -13%;
+    } 
+</style>
 </head>
 
 <body>
@@ -559,36 +566,106 @@ one way taxi hosur
 			
 			<!-- Default Form -->
 			<div class="default-form contact-form">
-				<form method="post" action="sendemail.php" id="contact-form">
+				<form method="post" action=" " id="bookingForm">
 					<div class="row clearfix">
 						
 						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" name="username" value="" placeholder="Your Name" required>
+							<input type="text" id="location-1" name="origin"   placeholder="Pickup Location" required>
 						</div>
 
 						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" name="username" value="" placeholder="Phone Number" required>
+							<input type="text" id="location-2" name="destination"  required class="form-control" placeholder="Drop Location">
 						</div>
-						
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" name="username" value="" placeholder="Pickup Location" required>
-						</div>
-
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" name="username" value="" placeholder="Drop Location" required>
-						</div>
-
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="email" name="email" value="" placeholder="Email Address" required>
-						</div>
-						
+								
 						<div class="form-group col-md-12 col-sm-12 col-xs-12">
-							<input type="text" name="subject" value="" placeholder="Subject" required>
+					     		<button type="button" class="theme-btn btn-style-one" onclick="calcRoute();"><span class="txt">// Check Price</span></button>
 						</div>
 						
+						
+						
+						<div id="ma" style="display: none;">  
+								<br><br>                              
+
+								<b> <div id="output" class="result-table"></div></b>
+								<div class="container-map" id="google-map"></div> 
+						<br><br>
+							
+							
+							<div class="price-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+									<div class="icon-box">
+										<span class="icon"><img src="img/sedan.png" alt=""  style="height: 100px; width: 100px;"></span>
+									</div>
+									<div class="title">Sedan</div>
+									<div class="price" id="output1"></div>
+								</div>
+							</div>
+							
+							<div class="price-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+									<div class="icon-box">
+										<span class="icon"><img src="img/suv.png" alt="" / style="height: 100px; width: 100px;"></span>
+									</div>
+									<div class="title">SUV</div>
+									<div class="price" id="output2"></div>
+								</div>
+							</div>
+
+
+								<div class="col-md-6">
+								<div class="service-thumbnail d-flex flex-fill">
+								<img src="https://a1droptaxi.com/img/traveller.png" alt="#" style="height: 130px; width: 130px; ">
+								<div id="output3" class="meta-item">
+							    </div>
+							</div>
+						    </div>
+							
+							<div class="price-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+									<div class="icon-box">
+										<span class="icon"><img src="img/van.png" alt="" / style="height: 100px; width: 100px;"></span>
+									</div>
+									<div class="title">Traveller</div>
+									<div class="price"  id="output2"></div>
+								</div>
+							</div>
+						</div> 
+
+						
+						
+						
+						
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="text" placeholder="Your Name" id="name">
+						</div>
+
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="tel" placeholder="Phone Number" placeholder="Your Number"id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number">          
+						</div>
+
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+						     <select id="cars" name="cars" class="form-control">
+							<option value="Sedan">Sedan</option>
+							<option value="SUV">SUV</option>
+							<option value="Traveller">Traveller</option>
+						      </select>
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+						   <select id="ser" name="ser">
+							<option value="One-Way">One-Way</option>
+							<option value="Round">Round</option>
+                                  	           </select>
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="date" required placeholder="01/01/2020"  id="pickupdate">
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="time" required placeholder="9:00AM"  id="pickuptime">
+						</div>
+											
 						
 						<div class="form-group text-center btn-column col-md-12 col-sm-12 col-xs-12">
-							<button type="submit" class="theme-btn btn-style-one"><span class="txt">// Book Car</span></button>
+							<input type="submit" class="theme-btn btn-style-one" id="ma1"  value="Find car"  onclick="testVariable()">
 						</div>
 						
 					</div>
@@ -1258,6 +1335,10 @@ one way taxi hosur
 <script src="js/wow.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/script.js"></script>
-
+     
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	 <script src="js/fast2.js"></script>
 </body>
 </html>
