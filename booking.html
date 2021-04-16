@@ -146,76 +146,155 @@
 	<!-- End Page Title Section -->
 	
 	<!-- Contact Page Section -->
-	<section class="contact-page-section">
-		<div class="auto-container">
-			<div class="row clearfix">
-				
-				<!-- Info Column -->
-				<div class="info-column col-lg-6 col-md-12 col-sm-12">
-					<div class="inner-column">
-						<!-- Sec Title -->
-						<div class="sec-title">
-							<h2>Have Any Questions<span class="theme_color">?</span><br> <i>Feel Free to Ask</i></h2>
-							<div class="text">Consectetur adipisicing elit, sed iusmod tempor incididunt ut labore magna aliqua. Utasy enim ad minim veniamh quis nostrud exercitation.</div>
-						</div>
-						
-						<!-- Mobile Menu Info -->
-						<div class="mobile-menu-info">
-							<div class="phone"><span class="icon flaticon-smartphone"></span><a href="tel:+(1)-469-700800">+(1) 469 700800</a></div>
-							<div class="text">E.  mashura [at] my-domain.ie <br> A.  36 Belfast Lane, Newyork 26033</div>
-						</div>
-						
-						<div class="profile-box">
-							<ul>
-								<li><a href="#"><span class="arrow"></span>my portfolio</a></li>
-								<li><a href="#"><span class="arrow "></span>Download my cv</a></li>
-							</ul>
-						</div>
-						
-					</div>
-				</div>
-				
-				<!-- Form Column -->
-				<div class="form-column col-lg-6 col-md-12 col-sm-12">
-					<div class="inner-column">
-						
-						<!-- Contact Form -->
-						<div class="default-form contact-form">
-							
-							<!-- Comment Form -->
-							<form method="post" action="sendemail.php" id="contact-form">
-									
-								<div class="form-group">
-									<input type="text" name="username" placeholder="Your Name" required>
-								</div>
-								
-								<div class="form-group">
-									<input type="email" name="email" placeholder="Email Address" required>
-								</div>
-								
-								<div class="form-group">
-									<input type="text" name="subject" placeholder="Subject" required>
-								</div>
-								
-								<div class="form-group">
-									<textarea class="" name="message" placeholder="Message"></textarea>
-								</div>
-								
-								<div class="form-group">
-									<button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="txt">\\ SEND MESSAGE</span></button>
-								</div>
-									
-							</form>
-								
-						</div>
-						<!--End Comment Form -->
-						
-					</div>
-				</div>
-				
+	<section class="intouch-section" style="background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);" >
+	<div class="auto-container">
+		<div class="inner-container" style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);">
+			
+			<!-- Sec Title -->
+			<div class="sec-title centered" >
+				<h2>Drop Taxi Online Booking<span class="theme_color">.</span></h2>
 			</div>
+			
+			<!-- Default Form -->
+			<div class="default-form contact-form">
+				<form method="post" action=" " id="bookingForm">
+					<div class="row clearfix">
+						
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="text" id="location-1" name="origin"   placeholder="Pickup Location" required>
+						</div>
+
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="text" id="location-2" name="destination"  required class="form-control" placeholder="Drop Location">
+						</div>
+								
+						<div class="form-group col-md-12 col-sm-12 col-xs-12">
+					     		<button type="button" class="theme-btn btn-style-one" onclick="calcRoute();"><span class="txt">// Check Price</span></button>
+						</div>
+						
+						
+						
+						<!--div id="ma" style="display: none;">  
+								<br><br>                              
+								<b> <div id="output" class="result-table"></div></b>
+								<div class="container-map" id="google-map"></div> 
+						<br><br>
+							
+							
+							<div class="price-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+									<div class="icon-box">
+										<span class="icon"><img src="img/sedan.png" alt=""  style="height: 100px; width: 100px;"></span>
+									</div>
+									<div class="title">Sedan</div>
+									<div class="price" id="output1"></div>
+								</div>
+							</div>
+							
+							<div class="price-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+									<div class="icon-box">
+										<span class="icon"><img src="img/suv.png" alt="" / style="height: 100px; width: 100px;"></span>
+									</div>
+									<div class="title">SUV</div>
+									<div class="price" id="output2"></div>
+								</div>
+							</div>
+								<div class="col-md-6">
+								<div class="service-thumbnail d-flex flex-fill">
+								<img src="https://a1droptaxi.com/img/traveller.png" alt="#" style="height: 130px; width: 130px; ">
+								<div id="output3" class="meta-item">
+							    </div>
+							</div>
+						    </div>
+							
+							<div class="price-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+									<div class="icon-box">
+										<span class="icon"><img src="img/van.png" alt="" / style="height: 100px; width: 100px;"></span>
+									</div>
+									<div class="title">Traveller</div>
+									<div class="price"  id="output2"></div>
+								</div>
+							</div>
+						</div--> 
+						    <div id="ma" style="display: none;">  
+							<br><br>                              
+
+							<b> <div id="output" class="result-table"></div></b>
+							<div class="container-map" id="google-map"></div> 
+					<br><br>
+						       <div class="col-md-12" required>
+							<div class="service-thumbnail d-flex flex-fill">
+							<img src="https://a1droptaxi.com/img/etios.png" alt="#" style="height: 90px; width: 90px; ">
+							<div id="output1" class="meta-item">
+						    </div>
+						</div>
+					    </div>
+
+							 <div class="col-md-12">
+							<div class="service-thumbnail d-flex flex-fill">
+							<img src="https://a1droptaxi.com/img/crysta.png" alt="#" style="height: 90px; width: 90px; ">
+							<div id="output2" class="meta-item">
+						    </div>
+						</div>
+					    </div>
+
+
+
+							<div class="col-md-12">
+							<div class="service-thumbnail d-flex flex-fill">
+							<img src="https://a1droptaxi.com/img/traveller.png" alt="#" style="height: 90px; width: 90px; ">
+							<div id="output3" class="meta-item">
+						    </div>
+						</div>
+					    </div>
+						</div> 
+						
+						
+						
+						
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="text" placeholder="Your Name" id="name">
+						</div>
+
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="tel" placeholder="Phone Number" placeholder="Your Number" id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number">          
+						</div>
+
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+						     <select id="cars" name="cars">
+							<option value="Sedan">Sedan</option>
+							<option value="SUV">SUV</option>
+							<option value="Traveller">Traveller</option>
+						      </select>
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+						   <select id="ser" name="ser">
+							<option value="One-Way">One-Way</option>
+							<option value="Round">Round</option>
+                                  	           </select>
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="date" required placeholder="01/01/2020"  id="pickupdate">
+						</div>
+						<div class="form-group col-md-6 col-sm-6 col-xs-12">
+							<input type="time" required placeholder="9:00AM"  id="pickuptime">
+						</div>
+											
+						
+						<div class="form-group text-center btn-column col-md-12 col-sm-12 col-xs-12">
+							<input type="submit" class="theme-btn btn-style-one" id="ma1"  value="Find car"  onclick="testVariable()">
+						</div>
+						
+					</div>
+					
+				</form>
+			</div>
+			
 		</div>
-	</section>
+	</div>
+</section>
 	<!-- End Contact Page Section -->
 	
 	<!-- Contact Map Section -->
@@ -300,6 +379,9 @@
 <script src="js/wow.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/script.js"></script>
-
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+	 <script src="js/fast2.js"></script>
 </body>
 </html>
