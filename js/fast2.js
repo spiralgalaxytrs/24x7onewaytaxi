@@ -9,9 +9,9 @@ function testVariable() {
     var strText7 = document.getElementById("cars").value;
     var strText8 = document.getElementById("ser").value;
    var rate;
-	var Clink="https://xyz.com";
-	var CPh="900000000";
-	var Cname="24x7";
+	var Clink="https://24x7onewaytaxi.com";
+	var CPh="9566044490";
+	var Cname="24x7 One Way Taxi";
 	//calcRoute()
     if((strText7=="Sedan") && (strText8=="One-Way"))
     {rate=sedano;}
