@@ -45,11 +45,11 @@ function calcRoute() {
             //Get distance and time            
             var d=result.routes[0].legs[0].distance.value/1000;
             var n = d.toFixed(0);
-            sedano=((n*12)+350)+" - "+((n*12)+500);
-            sedanr=2*((n*12)+350)+" - "+2*((n*12)+500);
-            suvo=((n*16)+350)+" - "+((n*16)+500);
-            suvr=2*((n*16)+350)+" - "+2*((n*16)+500);
-            traveller=(2*((n*18)+350))+" - "+(2*((n*18)+500));
+            sedano=((n*14)+350)+" - "+((n*14)+500);
+            sedanr=2*((n*13)+350)+" - "+2*((n*13)+500);
+            suvo=((n*19)+350)+" - "+((n*19)+500);
+            suvr=2*((n*17)+350)+" - "+2*((n*17)+500);
+            traveller=(2*((n*24)+700))+" - "+(2*((n*24)+1000));
            
           //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
