@@ -10,7 +10,7 @@ function testVariable() {
     var strText8 = document.getElementById("ser").value;
    var rate;
 	var Clink="https://24x7onewaytaxi.com";
-	var CPh="9566044490";
+	var CPh="7708440510";
 	var Cname="24x7 One Way Taxi";
 	//calcRoute()
     if((strText7=="Sedan") && (strText8=="One-Way"))
