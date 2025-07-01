@@ -1,4 +1,29 @@
-// function testVariable() {
+
+function testVariable() {
+	
+    var strText = document.getElementById("name").value;
+    var strText1 = document.getElementById("p").value;
+    var strText2 = document.getElementById("location-1").value;
+    var strText3 = document.getElementById("location-2").value;
+    var strText4 = document.getElementById("pickupdate").value;
+    var strText6 = document.getElementById("pickuptime").value;
+    var strText7 = document.getElementById("cars").value;
+    var strText8 = document.getElementById("ser").value;
+   var rate;
+	var Clink="https://24x7onewaytaxi.com";
+	var CPh="7708440510";
+	var Cname="24x7 One Way Taxi";
+	//calcRoute()
+    if((strText7=="Sedan") && (strText8=="One-Way"))
+    {rate=sedano;}
+    else if((strText7=="Sedan") && (strText8="Round"))
+    {rate=sedanr;}
+    else if((strText7=="SUV") && (strText8=="One-Way"))
+    {rate=suvo;}
+    else if((strText7=="SUV") && (strText8=="Round"))
+    {rate=suvr;}
+    else if(strText7=="Traveller")
+    {rate=traveller;}
 
 //     var strText = document.getElementById("name").value;
 //     var strText1 = document.getElementById("p").value;
