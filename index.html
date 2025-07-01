@@ -126,7 +126,7 @@
     <!-- End Main Header -->
 	
 	<!-- Banner Section -->
-    <section class="banner-section" style="background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);">
+    <section class="banner-section">
 		<div class="auto-container">
 
 			<!-- Content Boxed -->
@@ -162,158 +162,148 @@
         </a>
   
 	<!-- Intouch Section -->
-<section class="intouch-section" style="background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);" >
-	<div class="auto-container">
-		<div class="inner-container" style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);">
-			
-			<!-- Sec Title -->
-			<div class="sec-title centered" >
-				<h2>Drop Taxi Online Booking<span class="theme_color">.</span></h2>
+
+
+	<section class="intouch-section" style="background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);">
+		<div class="auto-container">
+			<div class="inner-container" style="background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);">
+	
+				<!-- Sec Title -->
+				<div class="sec-title centered">
+					<h2>Drop Taxi Online Booking<span class="theme_color">.</span></h2>
+				</div>
+	
+				<!-- Default Form -->
+				<div class="default-form contact-form">
+					<form method="post" action=" " id="bookingForm">
+						<div class="row clearfix">
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<input type="text" id="location-1" name="origin" placeholder="Pickup Location" required>
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<input type="text" id="location-2" name="destination" required class="form-control"
+									placeholder="Drop Location">
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<input type="text" placeholder="Your Name" id="name" required>
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<input type="tel" placeholder="Phone Number" id="p" pattern="[6-9]{1}[0-9]{9}" required
+									title="Enter Valid Phone Number">
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<select id="cars" name="cars" required>
+									<option value="Sedan">Sedan</option>
+									<option value="SUV">SUV</option>
+									<option value="Traveller">Traveller</option>
+								</select>
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<select id="ser" name="ser" required>
+									<option value="One-Way">One-Way</option>
+									<option value="Round">Round</option>
+								</select>
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<input type="date" required placeholder="01/01/2022" id="pickupdate">
+							</div>
+	
+							<div class="form-group col-md-6 col-sm-6 col-xs-12">
+								<input type="time" required placeholder="9:00AM" id="pickuptime">
+							</div>
+	
+							<div class="form-group text-center btn-column col-md-12 col-sm-12 col-xs-12">
+								<button type="button" class="theme-btn btn-style-one" id="ma1" onclick="testVariable()">Find car</button>
+							</div>
+	
+						</div>
+	
+					</form>
+				</div>
+	
 			</div>
-			
-			<!-- Default Form -->
-			<div class="default-form contact-form">
-				<form method="post" action=" " id="bookingForm">
-					<div class="row clearfix">
-						
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" id="location-1" name="origin"   placeholder="Pickup Location" required>
-						</div>
-
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" id="location-2" name="destination"  required class="form-control" placeholder="Drop Location">
-						</div>
-								
-						<div class="form-group col-md-12 col-sm-12 col-xs-12">
-					     		<button type="button" class="theme-btn btn-style-one" onclick="calcRoute();"><span class="txt">// Check Price</span></button>
-						</div>
-						
-						
-						
-						<!--div id="ma" style="display: none;">  
-								<br><br>                              
-
-								<b> <div id="output" class="result-table"></div></b>
-								<div class="container-map" id="google-map"></div> 
-						<br><br>
-							
-							
-							<div class="price-block col-lg-4 col-md-6 col-sm-12">
-								<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-									<div class="icon-box">
-										<span class="icon"><img src="img/sedan.png" alt=""  style="height: 100px; width: 100px;"></span>
-									</div>
-									<div class="title">Sedan</div>
-									<div class="price" id="output1"></div>
-								</div>
-							</div>
-							
-							<div class="price-block col-lg-4 col-md-6 col-sm-12">
-								<div class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-									<div class="icon-box">
-										<span class="icon"><img src="img/suv.png" alt="" / style="height: 100px; width: 100px;"></span>
-									</div>
-									<div class="title">SUV</div>
-									<div class="price" id="output2"></div>
-								</div>
-							</div>
-
-
-								<div class="col-md-6">
-								<div class="service-thumbnail d-flex flex-fill">
-								<img src="https://a1droptaxi.com/img/traveller.png" alt="#" style="height: 130px; width: 130px; ">
-								<div id="output3" class="meta-item">
-							    </div>
-							</div>
-						    </div>
-							
-							<div class="price-block col-lg-4 col-md-6 col-sm-12">
-								<div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-									<div class="icon-box">
-										<span class="icon"><img src="img/van.png" alt="" / style="height: 100px; width: 100px;"></span>
-									</div>
-									<div class="title">Traveller</div>
-									<div class="price"  id="output2"></div>
-								</div>
-							</div>
-						</div--> 
-						    <div id="ma" style="display: none;">  
-							<br><br>                              
-
-							<b> <div id="output" class="result-table"></div></b>
-							<div class="container-map" id="google-map"></div> 
-					<br><br>
-						       <div class="col-md-12" required>
-							<div class="service-thumbnail d-flex flex-fill">
-							<img src="https://a1droptaxi.com/img/etios.png" alt="#" style="height: 90px; width: 90px; ">
-							<div id="output1" class="meta-item">
-						    </div>
-						</div>
-					    </div>
-
-							 <div class="col-md-12">
-							<div class="service-thumbnail d-flex flex-fill">
-							<img src="https://a1droptaxi.com/img/crysta.png" alt="#" style="height: 90px; width: 90px; ">
-							<div id="output2" class="meta-item">
-						    </div>
-						</div>
-					    </div>
-
-
-
-							<div class="col-md-12">
-							<div class="service-thumbnail d-flex flex-fill">
-							<img src="https://a1droptaxi.com/img/traveller.png" alt="#" style="height: 90px; width: 90px; ">
-							<div id="output3" class="meta-item">
-						    </div>
-						</div>
-					    </div>
-						</div> 
-						
-						
-						
-						
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="text" placeholder="Your Name" id="name">
-						</div>
-
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="tel" placeholder="Phone Number" placeholder="Your Number" id="p" pattern="[6-9]{1}[0-9]{9}" title="Enter Valid Phone Number">          
-						</div>
-
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-						     <select id="cars" name="cars">
-							<option value="Sedan">Sedan</option>
-							<option value="SUV">SUV</option>
-							<option value="Traveller">Traveller</option>
-						      </select>
-						</div>
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-						   <select id="ser" name="ser">
-							<option value="One-Way">One-Way</option>
-							<option value="Round">Round</option>
-                                  	           </select>
-						</div>
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="date" required placeholder="01/01/2022"  id="pickupdate">
-						</div>
-						<div class="form-group col-md-6 col-sm-6 col-xs-12">
-							<input type="time" required placeholder="9:00AM"  id="pickuptime">
-						</div>
-											
-						
-						<div class="form-group text-center btn-column col-md-12 col-sm-12 col-xs-12">
-							<input type="submit" class="theme-btn btn-style-one" id="ma1"  value="Find car"  onclick="testVariable()">
-						</div>
-						
-					</div>
-					
-				</form>
-			</div>
-			
 		</div>
-	</div>
-</section>
+	</section>
+	
+	<script>
+		// Example rates (you can update these values as per your calculation logic)
+		var sedano = "₹2500";
+		var sedanr = "₹4000";
+		var suvo = "₹3500";
+		var suvr = "₹5000";
+		var traveller = "₹6000";
+	
+		function testVariable() {
+			var strText = document.getElementById("name").value.trim();
+			var strText1 = document.getElementById("p").value.trim();
+			var strText2 = document.getElementById("location-1").value.trim();
+			var strText3 = document.getElementById("location-2").value.trim();
+			var strText4 = document.getElementById("pickupdate").value;
+			var strText6 = document.getElementById("pickuptime").value;
+			var strText7 = document.getElementById("cars").value;
+			var strText8 = document.getElementById("ser").value;
+	
+			var rate;
+			var Clink = "https://xyz.com";
+			var CPh = strText1;
+			var Cname = "24x7 Taxi";
+	
+			// Price calculation
+			if ((strText7 == "Sedan") && (strText8 == "One-Way")) { rate = sedano; }
+			else if ((strText7 == "Sedan") && (strText8 == "Round")) { rate = sedanr; }
+			else if ((strText7 == "SUV") && (strText8 == "One-Way")) { rate = suvo; }
+			else if ((strText7 == "SUV") && (strText8 == "Round")) { rate = suvr; }
+			else if (strText7 == "Traveller") { rate = traveller; }
+			else { rate = "Price Not Available"; }
+	
+			// Form validation
+			if (strText == "" || strText1 == "" || strText2 == "" || strText3 == "" || strText4 == "" || strText6 == "") {
+				alert('Please fill all required fields.');
+				return;
+			}
+	
+			// Telegram message
+			var result = 'Customer Name: ' + strText +
+				'%0APhone Number: ' + strText1 +
+				'%0APickup Location: ' + strText2 +
+				'%0ADrop Location: ' + strText3 +
+				'%0APickup Date: ' + strText4 +
+				'%0APickup Time: ' + strText6 +
+				'%0AService: ' + strText8 +
+				'%0ACar: ' + strText7 +
+				'%0APrice: ' + rate;
+	
+			const telegramRequest = new XMLHttpRequest();
+			const url = 'https://api.telegram.org/bot1507830231:AAFU0Rh0HBOxc1o09T-h9cyyKV2gDD3QJbQ/sendMessage?chat_id=-1002056974382&text=' + result;
+			telegramRequest.open("POST", url);
+			telegramRequest.send();
+	
+			// SMS message
+			fetch("https://www.fast2sms.com/dev/bulk?authorization=tXGFnAr4LNYZM8Q9jwPVHxWdvs6eahl2qk5of7SzpRbOUEumITTnoiOFHqdCLhzJPgaxer2mpZ8UNEyf&sender_id=FSTSMS&message=" + Clink + "/%0AContact No: " + CPh + "%0AHello " + strText + ",%0AThank you for Booking with " + Cname + ". Your " + strText2 + " Booking has been Confirmed on " + strText4 + ".&language=english&route=p&numbers=" + strText1)
+				.then(response => {
+					if (response.status == 200) {
+						console.log("Message sent successfully.");
+						localStorage.setItem("result", rate);
+						localStorage.setItem("result1", strText7);
+						window.location.href = "bookingSuccess.html";
+					} else {
+						console.error("Failed to send SMS.");
+					}
+				})
+				.catch(error => {
+					console.error("Error sending SMS:", error);
+				});
+		}
+	</script>
+	
+		
 <!-- End Intouch Section -->
 	
     <a href="https://api.whatsapp.com/send?phone=+917708440510&text=Hello 24x7 One Way Taxi" class="float" target="_blank">
@@ -553,7 +543,7 @@
 						</div>
 						<div class="title">Sedan</div>
 						
-						<div class="price"><sup>₹</sup>14<sub>/ km</sub></div>
+						<div class="price"><sup>₹</sup>12<sub>/ km</sub></div>
 						
 						<ul>
 							<li>One Way Taxi</li>
@@ -572,7 +562,7 @@
 							<span class="icon"><img src="img/suv.png" alt="" / style="height: 100px; width: 100px;"></span>
 						</div>
 						<div class="title">SUV</div>
-						<div class="price"><sup>₹</sup>19<sub>/ km</sub></div>
+						<div class="price"><sup>₹</sup>16<sub>/ km</sub></div>
 						<ul>
 							<li>One Way Taxi</li>
 							<li>Driver Bata - 400</li>
@@ -590,10 +580,10 @@
 							<span class="icon"><img src="img/van.png" alt="" / style="height: 100px; width: 100px;"></span>
 						</div>
 						<div class="title">Traveller</div>
-						<div class="price"><sup>₹</sup>24<sub>/ km</sub></div>
+						<div class="price"><sup>₹</sup>18<sub>/ km</sub></div>
 						<ul>
 							<li>One Way Taxi</li>
-							<li>Driver Bata - 700</li>
+							<li>Driver Bata - 400</li>
 							<li>Toll & States are Excluded</li>
 							<li>Traveller, Coach, Minibus</li>
 						</ul>
@@ -630,7 +620,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="category">Toyoto Etios</div>
-							<h2><a href="booking.html">One way- 14/km <br> Round trip- 13/km</a></h2>
+							<h2><a href="booking.html">One way- 13/km <br> Round trip- 11/km</a></h2>
 						</div>
 					</div>
 				</div>
@@ -645,7 +635,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="category">Swift Dzire</div>
-							<h2><a href="booking.html">One way- 14/km <br> Round trip- 13/km</a></h2>
+							<h2><a href="booking.html">One way- 12/km <br> Round trip- 10/km</a></h2>
 						</div>
 					</div>
 				</div>
@@ -660,7 +650,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="category">Tata Zest</div>
-							<h2><a href="booking.html">One way- 14/km <br> Round trip- 13/km</a></h2>
+							<h2><a href="booking.html">One way- 12/km <br> Round trip- 10/km</a></h2>
 						</div>
 					</div>
 				</div>
@@ -675,7 +665,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="category">Toyoto Innova</div>
-							<h2><a href="booking.html">One way- 19/km <br> Round trip- 17/km</a></h2>
+							<h2><a href="booking.html">One way- 16/km <br> Round trip- 13/km</a></h2>
 						</div>
 					</div>
 				</div> 
@@ -690,7 +680,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="category">Innova Crysta</div>
-							<h2><a href="booking.html">One way- 20/km <br> Round trip- 18/km</a></h2>
+							<h2><a href="booking.html">One way- 17/km <br> Round trip- 15/km</a></h2>
 						</div>
 					</div>
 				</div>
@@ -705,7 +695,7 @@
 						</div>
 						<div class="lower-content">
 							<div class="category">Force Traveller</div>
-							<h2><a href="booking.html"> Round trip- 24/km</a></h2>
+							<h2><a href="booking.html"> Round trip- 18/km</a></h2>
 						</div>
 					</div>
 				</div>
@@ -973,8 +963,9 @@
 <script src="js/wow.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/script.js"></script>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjpBY_AquI2fBm0Ov1yYSAHjpJwMaf8XM&libraries=places"></script>
-<!--          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places"></script> -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjpBY_AquI2fBm0Ov1yYSAHjpJwMaf8XM&libraries=places"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNKpr4auBLgBgiOXJ41UUWTB58MZa6p3E&libraries=places"></script> -->
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
 	 <script src="js/fast2.js"></script>
