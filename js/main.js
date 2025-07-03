@@ -45,19 +45,28 @@ function calcRoute() {
             //Get distance and time            
             var d=result.routes[0].legs[0].distance.value/1000;
             var n = d.toFixed(0);
-            sedano=((n*14)+350)+" - "+((n*14)+500);
-            sedanr=2*((n*13)+350)+" - "+2*((n*13)+500);
-            suvo=((n*19)+350)+" - "+((n*19)+500);
-            suvr=2*((n*17)+350)+" - "+2*((n*17)+500);
-            traveller=(2*((n*24)+700))+" - "+(2*((n*24)+1000));
-           
+          
+            var km = Math.max(n,130);
+            var rkm = Math.max(2*n,250);
+            // console.log("distance", km, rkm);
+            // console.log("Disdence--->",n);
+            sedano=((km*14)+400);
+            sedanr=((rkm*13)+400);
+            suvo=((km*20)+400);
+            suvr=((rkm*18)+400);
+            crystao=((km*23)+400);
+            crystar=((km*21)+400);
+            traveller=((rkm*24)+600);
+
           //  $("#output").html("<div class='result-table'> Driving distance: " + result.routes[0].legs[0].distance.text + ".<br />SUV Rate: ₹" +((n)*12)+"-"+((n)*15)+".<br />Sedan Rate: ₹" +((n)*8)+"-"+((n)*11)+".<br />Hatchback Rate: ₹" +((n)*16)+"-"+((n)*19)+ ".<br />Duration: " + result.routes[0].legs[0].duration.text + ".</div>");
             //document.getElementById("output").style.display = "block";
-            $("#output1").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +sedano+"</span><br /><span> Round Way : ₹" +sedanr+"</span></div>");
+            $("#output1").html("<div class='meta-item;'>  <span> Distance: " + km + "</span><br /><span> One Way : ₹" +sedano+"</span><br /><span> Round Way : ₹" +sedanr+"</span></div>");
             document.getElementById("output1").style.display = "block";
-            $("#output2").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> One Way : ₹" +suvo+"</span><br /><span> Round Way : ₹" +suvr+"</span></div>");
+            $("#output2").html("<div class='meta-item;'>  <span> Distance: " + km + "</span><br /><span> One Way : ₹" +suvo+"</span><br /><span> Round Way : ₹" +suvr+"</span></div>");
             document.getElementById("output1").style.display = "block";
-            $("#output3").html("<div class='meta-item;'>  <span> Distance: " + result.routes[0].legs[0].distance.text + "</span><br /><span> Round Way : ₹" +traveller+"</span><br /><span> One Way : Not available </span></div>");
+            $("#output3").html("<div class='meta-item;'>  <span> Distance: " + km + "</span><br /><span> Round Way : ₹" +traveller+"</span><br /><span> One Way : Not available </span></div>");
+            document.getElementById("output1").style.display = "block";
+             $("#output4").html("<div class='meta-item;'>  <span> Distance: " + km + "</span><br /><span> One Way : ₹" +crystao+"</span><br /><span> Round Way : ₹" +crystar+"</span></div>");
             document.getElementById("output1").style.display = "block";
             //display route <span> Price  :  ₹13 / Km.</span>
             directionsDisplay.setDirections(result);
